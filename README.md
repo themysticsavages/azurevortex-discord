@@ -10,6 +10,8 @@
 
 ![img2](https://raw.githubusercontent.com/ajskateboarder/stuff/main/stuff/images.png)
 
+<sub>These images may be outdated.</sub>
+
 ## Self-hosting
 
 - To have an actual bot, create an application over at [the Discord Developer portal](https://discord.com/developers). Make sure to give `applications.commands` scope and the permission ID `939600902`!
