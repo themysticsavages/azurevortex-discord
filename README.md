@@ -12,6 +12,19 @@
 
 <sub>These images may be outdated.</sub>
 
+## Commands
+
+### General
+- help - Get help
+- ping - Ping the bot
+
+### Fun
+- email - Generate a totally random email
+- dog - Get a random dog image
+- highcont - Makes any image high-contrast
+- text - Formats text into different styles
+- fire - Burn any text
+
 ## Self-hosting
 
 - To have an actual bot, create an application over at [the Discord Developer portal](https://discord.com/developers). Make sure to give `applications.commands` scope and the permission ID `939600902`!
