@@ -32,7 +32,7 @@ async def _ping(ctx):
 async def _help(ctx):
     embedVar = discord.Embed(title="Help", color=0x00000, description='[**Invite me!**](https://discord.com/api/oauth2/authorize?client_id=865975119801221120&permissions=939600902&scope=applications.commands%20bot)', timestamp=datetime.utcnow())
     embedVar.add_field(name="😐 General", value="`help`, `ping`", inline=True)
-    embedVar.add_field(name="🎉 Fun", value="`email`, `dog`, `highcont`, `text`, `youtube`", inline=True)
+    embedVar.add_field(name="🎉 Fun", value="`email`, `dog`, `highcont`, `text`, `youtube`, `fire`", inline=True)
     await ctx.send(embed=embedVar)
 
 @slash.slash(name="dog", description="Send a cute doggo", guild_ids=None)
