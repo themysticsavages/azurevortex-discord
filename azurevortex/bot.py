@@ -1,8 +1,8 @@
 import os
 import json
+import time
 import discord
 from datetime import datetime
-from discord.ext.commands.errors import UserNotFound
 from discord_slash import SlashCommand
 from discord_slash.utils.manage_commands import create_option
 
@@ -14,6 +14,7 @@ import util.genemail
 import util.highcont
 import util.format
 import util.youtube
+import util.burn
 
 os.chdir('\\'.join(__file__.split('\\')[0:-1]))
 os.system('cls')
@@ -21,7 +22,7 @@ os.system('cls')
 @client.event
 async def on_ready():
     await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="/help"))
-    print('Azure is ready!')
+print('Azure is ready!')
 
 @slash.slash(name="ping", description="Send a ping", guild_ids=None)
 async def _ping(ctx):
@@ -61,5 +62,9 @@ async def _format(ctx, format: str, thing: str):
 @slash.slash(name="youtube", description="Return a YouTube video from a search query", options=[create_option(name="query", description="YouTube search query", option_type=3, required=True)], guild_ids=None)
 async def _youtube(ctx, query: str):
     await ctx.send(util.youtube.returnvideofromsearch(query))
+
+@slash.slash(name="fire", description='Make your text "burn"', options=[create_option(name="text", description="Text to burn", option_type=3, required=True)], guild_ids=None)
+async def _fire(ctx, text: str):
+    await ctx.send(util.burn.burn(text))
 
 client.run(json.loads(open('./config.json', 'r').read())['token'])
